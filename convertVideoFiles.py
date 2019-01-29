@@ -54,7 +54,7 @@ if __name__ == "__main__":
         dirname = os.path.dirname(fn)
         print "Dir:", os.path.dirname(fn)
 
-    for fn in glob(dirname + "/*.mp4"):
+    for fn in glob(dirname + "/*.mkv"):
         fn = fn.replace("\\","/")
         print fn
         fsize = os.path.getsize(fn)
