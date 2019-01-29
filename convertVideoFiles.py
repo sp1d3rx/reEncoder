@@ -5,7 +5,7 @@ import subprocess
 import json
 from glob import glob
 CREATE_NO_WINDOW = 0x08000000
-ffmpegBinPath = "C:\\Users\\spiderx\\Desktop\\ffmpeg-20181123-fa08345-win64-static\\bin\\"
+ffmpegBinPath = "C:\\Desktop\\ffmpeg-20181123-fa08345-win64-static\\bin\\"
 
 probeExe = ffmpegBinPath + "ffprobe.exe"
 ffmpegExe = ffmpegBinPath + "ffmpeg.exe"
@@ -48,7 +48,7 @@ if __name__ == "__main__":
     with thclass() as win:
         print type(win)
         fn = win.get_file(directory=r"F:\Download\tv", filetypes=(("video","*.mkv"),("all files","*.*")))
-        #root.filename = tkFileDialog.askopenfilename(initialdir = r"F:\Download\tv",title = "Select file",filetypes = (("video","*.mkv"),("all files","*.*")))
+        #root.filename = tkFileDialog.askopenfilename(initialdir = r"F:\tv",title = "Select file",filetypes = (("video","*.mkv"),("all files","*.*")))
         #print (root.filename)
         #fname = root.filename
         dirname = os.path.dirname(fn)
@@ -92,7 +92,7 @@ if __name__ == "__main__":
                    "-vf", "scale=1280x720",
                    # converts 5.1 to 2.0 stereo downmix for dolby matrix
                    "-af", "pan=stereo|FL < 1.0*FL + 0.707*FC + 0.707*BL|FR < 1.0*FR + 0.707*FC + 0.707*BR",
-                   # hevc using amd encoder
+                   # hevc using amd encoder. Change this if you dont have an AMD video card.
                    "-c:v", "hevc_amf",
                    # Variance Based Adaptive Quantization
                    "-vbaq", "1",
