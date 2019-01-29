@@ -11,4 +11,6 @@ Set the initial directory on line 50 (or dont).
 Run the .py file and it'll ask you to select a file. It will convert that file and all others that aren't already HEVC in that folder.
 
 Troubleshooting...
-If you are having trouble, try "convertThis.bat". Just put this in your ffmpeg bin folder, change the paths and drag and drop a video file to it. If it doesn't convert then it'll at least tell you why.
+1. Look at the paths to your ffmpeg.
+2. Make sure the glob is the right ending. mkv/mp4 whatever your files are.
+3. If you are having trouble, try "convertThis.bat". Just put this in your ffmpeg bin folder, change the paths and drag and drop a video file to it. If it doesn't convert then it'll at least tell you why.
