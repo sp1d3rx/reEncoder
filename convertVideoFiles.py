@@ -92,7 +92,7 @@ if __name__ == "__main__":
                    "-vf", "scale=1280x720",
                    # converts 5.1 to 2.0 stereo downmix for dolby matrix
                    "-af", "pan=stereo|FL < 1.0*FL + 0.707*FC + 0.707*BL|FR < 1.0*FR + 0.707*FC + 0.707*BR",
-                   # hevc using amd encoder. Change this if you dont have an AMD video card.
+                   # hevc using amd encoder. Change to hevc_nvenc for Nvidia cards.
                    "-c:v", "hevc_amf",
                    # Variance Based Adaptive Quantization
                    "-vbaq", "1",
